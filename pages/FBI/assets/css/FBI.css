@@ -131,6 +131,11 @@ a {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
+.container .buscado .image-buscado:hover {
+  transform: scale(0.95);
+  transition: all 150ms;
+}
+
 /* MODAL */
 
 .modal {
@@ -207,7 +212,7 @@ a {
 /* Menu Inferior - Paginación */
 
 .paginacion {
-  position: relative;
+  position: fixed;
   bottom: 0;
   background: var(--text-color);
   width: 100%;
@@ -239,4 +244,12 @@ a {
 .paginacion button:hover {
   background: var(--orange-color);
   border: 3px solid var(--orange-color);
+}
+
+@media only screen and (max-width: 1366px) {
+  .modal-container {
+    max-height: 90%;
+    max-width: 70%;
+    padding: 20px;
+  }
 }
