@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.background {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+  filter: blur(5px);
+}
+
+/* MENU */
+
+/* COLOR ROOT */
+
+:root {
+  --text-color: #fff;
+  --main-color: rgb(3, 119, 227);
+  --other-color: #b5b9bf;
+  --orange-color: #ffa301;
+  --menu-textocolor: #353535;
+
+  --h1-font: 4.5rem;
+  --h2-font: 2.9rem;
+  --p-font: 1rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: white;
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+  margin: 0 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo b {
+  color: #ffa301;
+}
+
+.menu {
+  height: 80px;
+}
+
+.menu nav {
+  height: 100%;
+}
+
+.menu nav ul {
+  height: 100%;
+  display: flex;
+  list-style: none;
+}
+
+.menu nav ul li {
+  height: 100%;
+  margin: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu nav ul li a {
+  font-size: 18px;
+  color: var(--menu-textocolor);
+}
+
+.menu nav ul li a:hover {
+  color: var(--orange-color);
+  transition: 150ms;
+}
+
+.menu .menu-clicked {
+  color: var(--orange-color);
+}
+
+/* CONTENIDO */
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 100px auto 100px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.container .buscado .titulo {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container .buscado .image-buscado {
+  cursor: pointer;
+  background-color: #fff;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.694);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  position: relative;
+  z-index: 1001;
+  width: 100%;
+  width: 100%;
+  max-height: 700px;
+  max-width: 900px;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px;
+  gap: 1em;
+  margin: auto;
+}
+
+.modal-container h5 {
+  font-size: 17px;
+}
+
+.modal-container span {
+  font-weight: lighter;
+}
+
+.modal-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-height: 300px;
+}
+
+.top-modal {
+  display: flex;
+  margin: 10px;
+  justify-content: end;
+}
+
+.modal-close {
+  cursor: pointer;
+  height: 30px;
+}
+
+.modal-imgBuscado {
+  display: flex;
+  justify-content: center;
+}
+
+.image-modal {
+  display: flex;
+  justify-content: end;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  width: 220px;
+  height: 300px;
+}
+
+.modal-paragraphBuscado h5 {
+  margin-top: 30px;
+}
+
+/* Menu Inferior - Paginación */
+
+.paginacion {
+  position: relative;
+  bottom: 0;
+  background: var(--text-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.paginacion button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  background: var(--menu-textocolor);
+  color: #fff;
+  border: 3px solid var(--menu-textocolor);
+  border-radius: 8px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: 0.3s ease all;
+}
+
+.paginacion button:hover {
+  background: var(--orange-color);
+  border: 3px solid var(--orange-color);
+}
