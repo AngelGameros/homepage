@@ -7,6 +7,7 @@ btnSiguiente.addEventListener('click', () => {
 		pagina += 1;
 		cargarBuscados();
 	}
+	scrollToTop();
 });
 
 btnAnterior.addEventListener('click', () => {
@@ -14,7 +15,15 @@ btnAnterior.addEventListener('click', () => {
 		pagina -= 1;
 		cargarBuscados();
 	}
+	scrollToTop();
 });
+
+function scrollToTop() {
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth' // Desplazamiento suave
+	});
+}
 
 const cargarBuscados = async () => {
 	try {
