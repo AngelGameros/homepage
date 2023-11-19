@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
 }
 
+.body-no-scroll {
+  overflow: hidden;
+}
+
 .background {
   z-index: -1;
   position: fixed;

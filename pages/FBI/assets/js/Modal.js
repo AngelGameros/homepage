@@ -43,7 +43,7 @@ function FbiModal(datos) {
                 </div>
             `;
             document.body.appendChild(modalDiv);
-
+            document.body.classList.add('body-no-scroll');
             modalDiv.addEventListener("click", function (event) {
                 if (event.target.classList.contains("modal-close") || event.target.classList.contains("modal")) {
                     cerrarModal();
@@ -51,6 +51,7 @@ function FbiModal(datos) {
             });
 
             function cerrarModal() {
+                document.body.classList.remove('body-no-scroll');
                 modalDiv.remove();
             }
 
